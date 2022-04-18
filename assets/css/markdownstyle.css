@@ -1,0 +1,30 @@
+/* Ozgur defines */
+:root {
+    --general-text-color: rgb(88, 90, 97);
+    --link-color: rgb(47, 171, 199);
+    --link-hover-color: rgb(17, 141, 169);
+    --white-color: rgb(255,255,255);
+}
+  
+/*--------------------------------------------------------------
+# Blog
+--------------------------------------------------------------*/
+.markdown-body {
+  font-family: "Roboto", sans-serif;
+  color: var(--general-text-color);
+}
+
+.markdown-body h1, h2, h3, h4, h5, h6 {
+  font-family: "Lobster", cursive;
+  color: var(--link-color);
+}
+
+.markdown-body a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  color: var(--link-hover-color);
+  text-decoration: none;
+}

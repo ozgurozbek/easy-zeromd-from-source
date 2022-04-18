@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1 minimum-scale=1, maximum-scale=1, viewport-fit=cover" name="viewport">
+
+  <title>Easy ZEROMD from Source</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <!-- font-family: 'Fredoka One', cursive; font-family: 'Lobster', cursive; font-family: 'Roboto', sans-serif; -->
+</head>
+
+<body>
+  <section id="mdcontainer" class="container">
+    <zero-md id="zero-md-container">
+      <template>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-light.min.css" />
+        <link rel="stylesheet" href="assets/css/markdownstyle.css" />
+      </template>
+    </zero-md>
+  </section>
+
+  <script type="module" src="./assets/js/zeromd.min.js"></script>
+
+</body>
+
+<script>
+  function getQuery(key) {
+      var query = window.location.search.substring(1);
+      var key_values = query.split("&");
+      var params = {};
+      key_values.map(function (key_val) {
+          var key_val_arr = key_val.split("=");
+          params[key_val_arr[0]] = key_val_arr[1];
+      });
+      if (typeof params[key] != "undefined") {
+          return params[key];
+      }
+      return "";
+  }
+
+  window.onload = function () {
+      document.getElementById("zero-md-container").setAttribute("src", getQuery("src")).setAttribute("no-shadow", "");
+  }
+</script>
+</html>
