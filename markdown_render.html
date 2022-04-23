@@ -41,8 +41,8 @@
       return "";
   }
 
-  window.onload = function () {
-      document.getElementById("zero-md-container").setAttribute("src", getQuery("src")).setAttribute("no-shadow", "");
-  }
+  document.addEventListener("DOMContentLoaded", function(event) { 
+    document.getElementById("zero-md-container").setAttribute("src", getQuery("src")).setAttribute("no-shadow", "");
+  });
 </script>
 </html>
